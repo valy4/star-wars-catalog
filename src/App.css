@@ -28,7 +28,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
   width: 200px;
   padding-left: 1rem;
   padding-right: 3rem;
@@ -65,7 +64,7 @@ p {
   color: black;
   background-color: #ff821e;
   height: 2rem;
-  align-self: center;
+  align-content: center;
   width: 7rem;
   cursor: pointer;
 }
