@@ -3,30 +3,32 @@ import CharacterCard from "../CharacterCard"
 
 function MainContent() {
   const [characters, setCharacters] = useState([])
+  const [nextUrl, setNextUrl] = useState("")
   useEffect(() => {
     fetch(`https://swapi.dev/api/people/`)
       .then((response) => response.json())
       .then((data) => {
-        setCharacters(data.results)
+        setCharacters([...characters, ...data.results])
+
         console.log(data)
 
-
+        setNextUrl(data.next)
 
       })
 
 
   }, []);
 
-  function getSimilar(event) {
-    console.log(event)
-    fetch(
-      `https://swapi.dev/api/people/?page=2`
-    )
-      .then((response) => response.json())
+  // function getMore(event) {
+  //   console.log(event)
+  //   fetch(
+  //     `https://swapi.dev/api/people/?page=2`
+  //   )
+  //     .then((response) => response.json())
 
-      .then((data) => { setCharacters(data.results) })
+  //     .then((data) => { setCharacters(data.results) })
 
-  }
+  // }
 
   return (
 
@@ -38,12 +40,13 @@ function MainContent() {
             height={character.height}
             birth_year={character.birth_year}
             films={character.films.length}
+            id={character.url.split("/")[5]}
 
           >
           </CharacterCard>)}
       </div>
       <div className="btn-place">
-        <button className="btn" onClick={getSimilar}>Load More_</button>
+        <button className="btn" onClick={nextUrl}>Load More_</button>
       </div>
     </div >
   )
