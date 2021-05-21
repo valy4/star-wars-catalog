@@ -38,6 +38,12 @@ p {
   margin-right: 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  height: 350px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.character:hover {
+  background-color: #fff2e8;
 }
 .btn-place {
   display: flex;

@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 function CharacterCard(props) {
   return (
-    <Link to={`/character/${props.id}`}>
+    <Link
+      to={`/character/${props.id}`}
+      style={{ textDecoration: "none", color: "black" }}
+    >
       <div className="character">
         <h2>{props.name}</h2>
         <p>Height: {props.height}</p>
