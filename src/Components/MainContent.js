@@ -16,26 +16,26 @@ function MainContent() {
       });
   }, []);
 
-  const [filmList, setFilmList] = useState([]);
+  // const [filmList, setFilmList] = useState([]);
 
-  useEffect(function () {
-    fetch(`http https://swapi.dev/api/films/`)
-      .then((response) => response.json())
-      .then((data) => {
-        setFilmList(data);
-        console.log(data);
-      });
-  }, []);
-  // function getMore(event) {
-  //   console.log(event)
-  //   fetch(
-  //     `https://swapi.dev/api/people/?page=2`
-  //   )
+  // useEffect(function () {
+  //   fetch(`http https://swapi.dev/api/films/`)
   //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setFilmList(data);
+  //       console.log(data);
+  //     });
+  // }, []);
+  function getMore(event) {
+    console.log(event);
+    fetch(nextUrl)
+      .then((response) => response.json())
 
-  //     .then((data) => { setCharacters(data.results) })
-
-  // }
+      .then((data) => {
+        setCharacters([...characters, ...data.results]);
+        setNextUrl(data.next)
+      });
+  }
 
   return (
     <div className="App">
@@ -52,7 +52,7 @@ function MainContent() {
         ))}
       </div>
       <div className="btn-place">
-        <button className="btn" onClick={nextUrl}>
+        <button className="btn" onClick={getMore} data-cy="btn-load-more">
           Load More_
         </button>
       </div>

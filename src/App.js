@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainContent from "./Components/MainContent";
 import Header from "./Components/Header";
 import CharacterPage from "./Components/CharacterPage";
+import FilmPage from "./Components/FilmPage";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route path="/character/:id">
             <CharacterPage />
+          </Route>
+          <Route path="/film/:id">
+            <FilmPage />
           </Route>
           <Route path="/">
             <MainContent />
