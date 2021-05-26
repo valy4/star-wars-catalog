@@ -16,16 +16,6 @@ function MainContent() {
       });
   }, []);
 
-  // const [filmList, setFilmList] = useState([]);
-
-  // useEffect(function () {
-  //   fetch(`http https://swapi.dev/api/films/`)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setFilmList(data);
-  //       console.log(data);
-  //     });
-  // }, []);
   function getMore(event) {
     console.log(event);
     fetch(nextUrl)

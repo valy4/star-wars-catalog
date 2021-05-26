@@ -1,12 +1,27 @@
-import React from "react"
+
+import React, { useState, useEffect } from "react"
 import { useParams } from "react-router"
 
-function FilmPage(props) {
+
+function FilmPage() {
   const { id } = useParams()
+
+  const [filmCrawl, setFilmCrawl] = useState([])
+  useEffect(() => {
+    fetch(`https://swapi.dev/api/films/${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setFilmCrawl([...filmCrawl, data.opening_crawl]);
+        console.log(data)
+      });
+  }, []);
   return (
+    <div>
 
-    <h1>c</h1>
-
+      {filmCrawl.map((film) => (
+        <p>opening={film}</p>
+      ))}
+    </div>
   )
 }
 export default FilmPage
