@@ -38,8 +38,12 @@ function CharacterPage() {
         <Line>Hair Color={details.hair_color}</Line>
       </SecPage>
       <Films>Films={details.films?.length}</Films>
-      {details.films && details.films.map(film => <FilmCard url={film}></FilmCard>)}
-      {details.films && details.films.map(film => <FilmCardClass url={film}></FilmCardClass>)}
+
+      <ListFilm>
+        {details.films &&
+          details.films.map((film) => <FilmCard url={film}></FilmCard>)}
+      </ListFilm>
+      {/* {details.films && details.films.map(film => <FilmCardClass url={film}></FilmCardClass>)} */}
 
       <div className="btn-place">
         <Link to={"/"}>
@@ -79,7 +83,9 @@ const Films = styled.p`
   border: 1px none #f46d00;
   width: 15rem;
   height: 50px;
-  margin: 5rem;
+  margin-left: 5rem;
+  margin-right:5rem;
+  margin-top:5rem;
 `;
 const Name = styled.h1`
   color: #f46d00;
@@ -88,4 +94,17 @@ const Name = styled.h1`
 `;
 const Btn = styled.button`
   font-size: 1rem;
+`;
+const ListFilm = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #f46d00;
+  width: 15rem;
+  height: 30rem;
+  margin-left: 5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
 `;

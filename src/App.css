@@ -77,3 +77,16 @@ p {
 .btn-details:hover {
   background-color: #f46d00;
 }
+.listTitle:hover {
+  color: #f46d00;
+}
+.titleYear {
+  display: flex;
+  justify-content: space-between;
+}
+.crawl {
+  margin-top: 2rem;
+  text-align: justify;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
