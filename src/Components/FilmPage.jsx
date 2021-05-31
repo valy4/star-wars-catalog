@@ -19,7 +19,7 @@ function FilmPage() {
     <div>
 
       {filmCrawl.map((film) => (
-        <p className="crawl">{film}</p>
+        <div className="crawl">{film}</div>
       ))}
     </div>
   )
