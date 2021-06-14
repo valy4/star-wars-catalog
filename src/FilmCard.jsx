@@ -10,7 +10,7 @@ function FilmCard(props) {
       .then((data) => {
         setFilmData(data);
       });
-  }, []);
+  }, [props.url]);
 
   return (
     <Link

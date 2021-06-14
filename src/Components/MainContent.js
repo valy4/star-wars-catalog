@@ -8,7 +8,7 @@ function MainContent() {
     fetch(`https://swapi.dev/api/people/`)
       .then((response) => response.json())
       .then((data) => {
-        setCharacters([...characters, ...data.results]);
+        setCharacters((characters) => [...characters, ...data.results]);
 
         console.log(data);
 

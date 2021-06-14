@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import FilmCard from "../FilmCard";
-import FilmCardClass from "../FilmCardClass";
+
 
 function CharacterPage() {
   let { id } = useParams();
   const [details, setDetails] = useState([]);
-  const [listFilm, setListFilm] = useState([]);
+  // const [listFilm, setListFilm] = useState([]);
 
   useEffect(() => {
     fetch(`https://swapi.dev/api/people/${id}/`)
@@ -17,16 +17,16 @@ function CharacterPage() {
         setDetails(data);
         console.log(data);
 
-        data.films.map((film) => {
-          fetch(film)
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              setListFilm([...listFilm, data.title]);
-            });
-        });
+        // data.films.forEach((film) => {
+        //   fetch(film)
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //       console.log(data);
+        //       setListFilm((listFilm) => [...listFilm, data.title]);
+        //     });
+        // });
       });
-  }, []);
+  }, [id]);
 
   return (
     <Container>

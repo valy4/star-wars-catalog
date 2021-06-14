@@ -11,10 +11,10 @@ function FilmPage() {
     fetch(`https://swapi.dev/api/films/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setFilmCrawl([...filmCrawl, data.opening_crawl]);
+        setFilmCrawl((filmCrawl) => [...filmCrawl, data.opening_crawl]);
         console.log(data)
       });
-  }, []);
+  }, [id]);
   return (
     <div>
 
