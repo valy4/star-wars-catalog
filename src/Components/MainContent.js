@@ -24,6 +24,7 @@ function MainContent() {
       .then((data) => {
         setCharacters([...characters, ...data.results]);
         setNextUrl(data.next)
+        console.log(nextUrl)
       });
   }
 
