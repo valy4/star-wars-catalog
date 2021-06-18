@@ -2,7 +2,9 @@ import React from "react"
 import styled from "styled-components"
 function Header() {
   return (
-    <Title >Star Wars Catalog</Title>
+    <Title >Star Wars Catalog
+
+    </Title>
   )
 }
 
@@ -10,11 +12,12 @@ function Header() {
 
 export default Header
 const Title = styled.div`
-background-color:black;
-color: white;
+background-color:#023047;
+color: #ffb703;
 height: 4rem;
 display: flex;
 justify-content:center;
 font-size: 2rem;
 align-items: center;
+
 `

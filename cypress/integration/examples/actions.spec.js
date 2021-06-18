@@ -18,6 +18,18 @@ context('Actions', () => {
 
 
   })
+  it(' search for new character', () => {
+    // 1. type the name of character
+    //2.click on search
+    cy.wait(3000)
+    cy.get('[data-cy=search-bar]')
+      .type(`r2-d2`)
+    cy.wait(3000)
+    cy.get('[data-cy=search-button]')
+      .click()
+
+
+  })
 
 
 

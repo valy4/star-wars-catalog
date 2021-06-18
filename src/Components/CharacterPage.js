@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import FilmCard from "../FilmCard";
 
-
 function CharacterPage() {
   let { id } = useParams();
   const [details, setDetails] = useState([]);
@@ -56,8 +55,9 @@ function CharacterPage() {
 
 export default CharacterPage;
 const Container = styled.div`
-  margin-left: 3rem;
-  margin-right: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #219ebc;
 `;
 
 const SecPage = styled.div`
@@ -65,13 +65,17 @@ const SecPage = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 5rem;
+  & :hover {
+    -moz-box-shadow: 0 0 50px #023047;
+    -webkit-box-shadow: 0 0 50px #023047;
+    box-shadow: 0 0 50px #023047;
+  }
 `;
 
 const Line = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #f46d00;
   width: 15rem;
   height: 50px;
 `;
@@ -80,17 +84,17 @@ const Films = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px none #f46d00;
+
   width: 15rem;
   height: 50px;
   margin-left: 5rem;
-  margin-right:5rem;
-  margin-top:5rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
 `;
 const Name = styled.h1`
-  color: #f46d00;
+  color: #ffb703;
   margin-left: 10rem;
-  margin-top: 5rem;
+  padding-top: 2rem;
 `;
 const Btn = styled.button`
   font-size: 1rem;
@@ -99,12 +103,15 @@ const ListFilm = styled.div`
   display: flex;
   flex-direction: column;
 
-  border: 1px solid #f46d00;
   width: 15rem;
   height: 30rem;
   margin-left: 5rem;
   padding-top: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-
+  & :hover {
+    -moz-box-shadow: 0 0 50px #023047;
+    -webkit-box-shadow: 0 0 50px #023047;
+    box-shadow: 0 0 50px #023047;
+  }
 `;

@@ -1,12 +1,9 @@
-.title {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  font-size: 4rem;
-  color: #f46d00;
+.App {
+  background-color: #219ebc;
 }
+
 h2 {
-  color: #f46d00;
+  color: #ffb703;
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -14,6 +11,7 @@ h2 {
 }
 p {
   font-size: 1.2rem;
+  color: #023047;
 }
 .container {
   display: flex;
@@ -32,7 +30,8 @@ p {
   padding-left: 1rem;
   padding-right: 3rem;
   padding-bottom: 1rem;
-  border: solid #f46d00 1px;
+  border: solid #219ebc 1px;
+  background-color: #219ebc;
   border-radius: 5px;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -43,26 +42,29 @@ p {
   text-decoration: none;
 }
 .character:hover {
-  background-color: #fff2e8;
+  -moz-box-shadow: 0 0 50px #023047;
+  -webkit-box-shadow: 0 0 50px #023047;
+  box-shadow: 0 0 50px #023047;
 }
+
 .btn-place {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 .btn {
-  border: solid #f46d00 1px;
+  border: solid #ffb703 1px;
   border-radius: 8px;
-  color: black;
-  background-color: #ff821e;
+  color: #023047;
+  background-color: #ffb703;
   height: 3rem;
   align-self: center;
   width: 10rem;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #f46d00;
+  background-color: #e9c46a;
 }
 .btn-details {
   border: solid #f46d00 1px;
@@ -78,7 +80,7 @@ p {
   background-color: #f46d00;
 }
 .listTitle:hover {
-  color: #f46d00;
+  color: #ffb703;
 }
 .titleYear {
   display: flex;
@@ -89,4 +91,17 @@ p {
   text-align: justify;
   padding-left: 5rem;
   padding-right: 5rem;
+}
+.container-search {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.footer {
+  height: 3rem;
+  background-color: #000814;
+  color: #ffc300;
+  font-size: 0.8rem;
+  text-align: center;
+  align-content: center;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-
+import Footer from "./Components/Footer"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainContent from "./Components/MainContent";
 import Header from "./Components/Header";
@@ -23,6 +23,7 @@ function App() {
             <MainContent />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
