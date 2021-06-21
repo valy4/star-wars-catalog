@@ -25,7 +25,7 @@ p {
 .character {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 200px;
   padding-left: 1rem;
   padding-right: 3rem;
@@ -35,8 +35,6 @@ p {
   border-radius: 5px;
   margin-left: 3rem;
   margin-right: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
   height: 350px;
   cursor: pointer;
   text-decoration: none;
@@ -66,19 +64,7 @@ p {
 .btn:hover {
   background-color: #e9c46a;
 }
-.btn-details {
-  border: solid #f46d00 1px;
-  border-radius: 8px;
-  color: black;
-  background-color: #ff821e;
-  height: 2rem;
-  align-content: center;
-  width: 7rem;
-  cursor: pointer;
-}
-.btn-details:hover {
-  background-color: #f46d00;
-}
+
 .listTitle:hover {
   color: #ffb703;
 }
@@ -98,10 +84,10 @@ p {
   padding-top: 3rem;
 }
 .footer {
-  height: 3rem;
+  height: 2rem;
   background-color: #000814;
   color: #ffc300;
   font-size: 0.8rem;
   text-align: center;
-  align-content: center;
+  padding-top: 1rem;
 }

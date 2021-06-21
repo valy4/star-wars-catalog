@@ -58,6 +58,7 @@ const Container = styled.div`
   padding-left: 3rem;
   padding-right: 3rem;
   background-color: #219ebc;
+
 `;
 
 const SecPage = styled.div`

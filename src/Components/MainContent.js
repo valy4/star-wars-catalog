@@ -88,6 +88,7 @@ const Field = styled.input`
   border-radius: 10px;
   width: 30rem;
   height: 2rem;
+
 `;
 const SearchBtn = styled.button`
 font-size: 1.5rem;
@@ -99,7 +100,7 @@ font-size: 1.5rem;
 
  `;
 const Picture = styled.img`
-  height: 250px;
+  height: 350px;
   width: 250px;
   object-fit: cover;
 `;
@@ -107,4 +108,5 @@ const PtcContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding-top: 3rem;
+
 `;
