@@ -96,6 +96,7 @@ const Name = styled.h1`
   color: #ffb703;
   margin-left: 10rem;
   padding-top: 2rem;
+  margin-top:0px;
 `;
 const Btn = styled.button`
   font-size: 1rem;
